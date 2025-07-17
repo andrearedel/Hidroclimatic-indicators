@@ -1,14 +1,17 @@
 #!/bin/bash
+
 set -e
 
-# Descargar Quarto Linux (Netlify corre en Linux)
-curl -LO https://github.com/quarto-dev/quarto-cli/releases/latest/download/quarto-linux-amd64.deb
+echo "Descargando Quarto..."
+curl -LO https://github.com/quarto-dev/quarto-cli/releases/latest/download/quarto-linux-amd64.tar.gz
 
-# Instalar paquete .deb
-sudo dpkg -i quarto-linux-amd64.deb
+echo "Descomprimiendo..."
+tar -xzf quarto-linux-amd64.tar.gz
 
-# Confirmar que quarto está instalado
-quarto --version
+echo "Agregando Quarto a PATH"
+export PATH=$PWD/quarto/bin:$PATH
 
-# Construir el sitio
+echo "Renderizando sitio con Quarto"
 quarto render
+
+echo "Build completado"
