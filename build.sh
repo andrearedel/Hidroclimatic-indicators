@@ -1,15 +1,10 @@
 #!/bin/bash
-
-# Salir si ocurre un error
 set -e
 
-# Descargar e instalar Quarto
-curl -LO https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.550/quarto-1.4.550-linux-amd64.tar.gz
-tar -xvzf quarto-1.4.550-linux-amd64.tar.gz
-export PATH=$PWD/quarto/bin:$PATH
+echo "Instalando quarto-cli con pip..."
+pip install --upgrade quarto-cli
 
-# Verificar que Quarto funciona
-quarto --version
-
-# Renderizar el sitio
+echo "Renderizando el sitio con quarto..."
 quarto render
+
+echo "Build terminado correctamente."
