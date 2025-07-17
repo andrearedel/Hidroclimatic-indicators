@@ -1,17 +1,15 @@
 #!/bin/bash
 
+# Salir si ocurre un error
 set -e
 
-echo "Descargando Quarto..."
+# Descargar e instalar Quarto
 curl -LO https://github.com/quarto-dev/quarto-cli/releases/latest/download/quarto-linux-amd64.tar.gz
-
-echo "Descomprimiendo..."
-tar -xzf quarto-linux-amd64.tar.gz
-
-echo "Agregando Quarto a PATH"
+tar -xvzf quarto-linux-amd64.tar.gz
 export PATH=$PWD/quarto/bin:$PATH
 
-echo "Renderizando sitio con Quarto"
-quarto render
+# Verificar que Quarto funciona
+quarto --version
 
-echo "Build completado"
+# Renderizar el sitio
+quarto render
