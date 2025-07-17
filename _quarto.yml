@@ -1,0 +1,21 @@
+project:
+  type: website
+
+website:
+  title: "Andrea Redel"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: indicadores.qmd
+        text: Hidroclimatic indicators
+      - href: about.qmd
+        text: About me
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
