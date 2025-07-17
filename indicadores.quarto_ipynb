@@ -115,7 +115,7 @@
         "\n",
         "4.1.1.1 Import libraries"
       ],
-      "id": "e350bce2"
+      "id": "35c16ddf"
     },
     {
       "cell_type": "code",
@@ -126,7 +126,7 @@
         "import warnings\n",
         "warnings.filterwarnings(\"ignore\", category=FutureWarning)"
       ],
-      "id": "fd315ebc",
+      "id": "cbb4a0c8",
       "execution_count": null,
       "outputs": []
     },
@@ -136,7 +136,7 @@
       "source": [
         "4.1.1.2. Make sure the directory exists"
       ],
-      "id": "e9ff6ed6"
+      "id": "627524ac"
     },
     {
       "cell_type": "code",
@@ -145,7 +145,7 @@
         "def asegurar_directorio(ruta):\n",
         "    os.makedirs(ruta, exist_ok=True)"
       ],
-      "id": "2110d0fb",
+      "id": "044f17b9",
       "execution_count": null,
       "outputs": []
     },
@@ -155,7 +155,7 @@
       "source": [
         "4.1.1.3. Define folder paths"
       ],
-      "id": "cec055da"
+      "id": "cf59b4ec"
     },
     {
       "cell_type": "code",
@@ -163,7 +163,7 @@
       "source": [
         "os.chdir('/Users/andrearedel/Documents/Retoño')"
       ],
-      "id": "20d787ab",
+      "id": "338d31d4",
       "execution_count": null,
       "outputs": []
     },
@@ -174,7 +174,7 @@
         "ruta_base = 'Hidroclima/Base de datos'\n",
         "ruta_guardado = os.path.join(ruta_base, '0.filtrado_estaciones')"
       ],
-      "id": "5f27cfa1",
+      "id": "b260e077",
       "execution_count": null,
       "outputs": []
     },
@@ -184,7 +184,7 @@
       "source": [
         "4.1.1.4. Create the directory if it doesn't exist"
       ],
-      "id": "1e4aec0a"
+      "id": "e0e064cc"
     },
     {
       "cell_type": "code",
@@ -192,7 +192,7 @@
       "source": [
         "asegurar_directorio(ruta_guardado)"
       ],
-      "id": "61ccdd49",
+      "id": "d3220013",
       "execution_count": null,
       "outputs": []
     },
@@ -202,7 +202,7 @@
       "source": [
         "4.1.1.5. Additional columns"
       ],
-      "id": "16584fd8"
+      "id": "338da478"
     },
     {
       "cell_type": "code",
@@ -210,7 +210,7 @@
       "source": [
         "columnas_adicionales = ['year', 'month', 'day']"
       ],
-      "id": "14a5e4f5",
+      "id": "d4df9667",
       "execution_count": null,
       "outputs": []
     },
@@ -220,7 +220,7 @@
       "source": [
         "4.1.2. Maximum temperature filter 4.1.2.1. Read the CSV file"
       ],
-      "id": "07e074d1"
+      "id": "24497f18"
     },
     {
       "cell_type": "code",
@@ -228,7 +228,7 @@
       "source": [
         "df = pd.read_csv(os.path.join(ruta_base, 'CAMELS_CL_v202201/tmax_cr2met_C_day.csv'))"
       ],
-      "id": "0062f4d9",
+      "id": "915a7c68",
       "execution_count": null,
       "outputs": []
     },
@@ -238,7 +238,7 @@
       "source": [
         "4.1.2.2. Filter columns based on River Basin"
       ],
-      "id": "18b0fc4b"
+      "id": "78d3b132"
     },
     {
       "cell_type": "code",
@@ -247,7 +247,7 @@
         "columnas_filtradas = [col for col in df.columns if col.isdigit() and 9100000 <= int(col) <= 9199999]\n",
         "columnas_filtradas += [col for col in columnas_adicionales if col in df.columns]"
       ],
-      "id": "3ef2f3f8",
+      "id": "1f22477a",
       "execution_count": null,
       "outputs": []
     },
@@ -262,7 +262,7 @@
         "-   Change the station code range, for example, the Imperial River Basin, identified by the code `91`.\n",
         "-   Update all relevant parts of the script accordingly."
       ],
-      "id": "3cb5d78a"
+      "id": "92035a9e"
     },
     {
       "cell_type": "code",
@@ -271,7 +271,7 @@
         "columnas_filtradas = [col for col in df.columns if col.isdigit() and 9400000 <= int(col) <= 9499999]\n",
         "columnas_filtradas += [col for col in columnas_adicionales if col in df.columns]"
       ],
-      "id": "cf5ae194",
+      "id": "e45f9c69",
       "execution_count": null,
       "outputs": []
     },
@@ -281,7 +281,7 @@
       "source": [
         "4.1.2.3. Create a new Data Frame with the filtered columns"
       ],
-      "id": "32d6b2da"
+      "id": "a3925c94"
     },
     {
       "cell_type": "code",
@@ -289,7 +289,7 @@
       "source": [
         "df_filtrado = df[columnas_filtradas]"
       ],
-      "id": "30b2da1f",
+      "id": "330ccdfc",
       "execution_count": null,
       "outputs": []
     },
@@ -299,7 +299,7 @@
       "source": [
         "4.1.2.4. Save the new Data Frame to a CSV file"
       ],
-      "id": "88e2aec1"
+      "id": "b7ddd077"
     },
     {
       "cell_type": "code",
@@ -324,7 +324,7 @@
       "source": [
         "4.1.3. Minimum Temperature filter The same process is repeated as with the maximum temperature."
       ],
-      "id": "f8a5d7ec"
+      "id": "bf677ddb"
     },
     {
       "cell_type": "code",
@@ -356,7 +356,7 @@
       "source": [
         "4.1.4. Precipitation filter The same process is repeated."
       ],
-      "id": "93984473"
+      "id": "ab9efe6d"
     },
     {
       "cell_type": "code",
@@ -388,7 +388,7 @@
       "source": [
         "4.1.5. Streamflow filter The same process is repeated."
       ],
-      "id": "d79a3136"
+      "id": "c418deb0"
     },
     {
       "cell_type": "code",
@@ -422,7 +422,7 @@
         "\n",
         "4.2.1. Minimum Temperature 4.2.1.1. CSV file path"
       ],
-      "id": "b84331fd"
+      "id": "469b2be8"
     },
     {
       "cell_type": "code",
@@ -430,7 +430,7 @@
       "source": [
         "archivo_csv = 'Hidroclima/Base de datos/0.filtrado_estaciones/tmin.csv'"
       ],
-      "id": "058f0bfc",
+      "id": "36e87509",
       "execution_count": null,
       "outputs": []
     },
@@ -440,7 +440,7 @@
       "source": [
         "4.2.1.2. Read CSV file"
       ],
-      "id": "5b27ff48"
+      "id": "3729be95"
     },
     {
       "cell_type": "code",
@@ -448,7 +448,7 @@
       "source": [
         "df = pd.read_csv(archivo_csv)"
       ],
-      "id": "afbe0381",
+      "id": "cd5d9641",
       "execution_count": null,
       "outputs": []
     },
@@ -458,7 +458,7 @@
       "source": [
         "4.2.1.3. Get the Data Frame columns"
       ],
-      "id": "7f2f3e3d"
+      "id": "820bb947"
     },
     {
       "cell_type": "code",
@@ -466,7 +466,7 @@
       "source": [
         "columnas = df.columns"
       ],
-      "id": "ad021b95",
+      "id": "4de31944",
       "execution_count": null,
       "outputs": []
     },
@@ -476,7 +476,7 @@
       "source": [
         "4.2.1.4. Create a directory to save files by column"
       ],
-      "id": "1a932013"
+      "id": "88e44aea"
     },
     {
       "cell_type": "code",
@@ -485,7 +485,7 @@
         "output_dir = 'Hidroclima/Base de datos/1.temperaturas_min'\n",
         "os.makedirs(output_dir, exist_ok=True)"
       ],
-      "id": "b155e983",
+      "id": "c85bae0d",
       "execution_count": null,
       "outputs": []
     },
@@ -495,7 +495,7 @@
       "source": [
         "4.2.1.5. Iterate over the columns and save the data for `year`, `month,` and `day`"
       ],
-      "id": "b794d852"
+      "id": "6ffca605"
     },
     {
       "cell_type": "code",
@@ -533,7 +533,7 @@
       "source": [
         "4.2.2. Maximum Temperature The same process is repeated"
       ],
-      "id": "62e4d356"
+      "id": "1545514f"
     },
     {
       "cell_type": "code",
@@ -580,7 +580,7 @@
       "source": [
         "4.2.3. Precipitation The same process is repeated"
       ],
-      "id": "d6fd686b"
+      "id": "02c963bd"
     },
     {
       "cell_type": "code",
@@ -627,7 +627,7 @@
       "source": [
         "4.2.4. Streamflow The same process is repeated"
       ],
-      "id": "27feba21"
+      "id": "8e780924"
     },
     {
       "cell_type": "code",
@@ -676,7 +676,7 @@
         "\n",
         "4.3.1. Format data for compability with Climpact 4.3.1.1. Mapping precipitation, minimum and maximum temperature based on filename and file path"
       ],
-      "id": "e9f3240b"
+      "id": "60d9f392"
     },
     {
       "cell_type": "code",
@@ -719,7 +719,7 @@
         "        else:\n",
         "            estaciones_data[estacion] = estaciones_data[estacion].merge(df[['year', 'month', 'day', columna]], on=['year', 'month', 'day'], how='outer')"
       ],
-      "id": "35188dd9",
+      "id": "bde78827",
       "execution_count": null,
       "outputs": []
     },
@@ -729,7 +729,7 @@
       "source": [
         "4.3.1.2. Save files by station"
       ],
-      "id": "92ce322e"
+      "id": "7f1ada95"
     },
     {
       "cell_type": "code",
@@ -745,7 +745,7 @@
         "    \n",
         "    df = df[['year', 'month', 'day', 'prcp', 'tmax', 'tmin']]"
       ],
-      "id": "ae1cfdee",
+      "id": "3e1f6caa",
       "execution_count": null,
       "outputs": []
     },
@@ -767,7 +767,7 @@
         "\n",
         "-   Correct order of columns"
       ],
-      "id": "e333cf8b"
+      "id": "9ac2e346"
     },
     {
       "cell_type": "code",
@@ -823,7 +823,7 @@
       "source": [
         "4.3.2. Format data for compability with IHA 4.3.2.1. The same process is repeated, now for the streamflow."
       ],
-      "id": "3ae1d93b"
+      "id": "9099bb08"
     },
     {
       "cell_type": "code",
@@ -850,7 +850,7 @@
         "\n",
         "        df = df[['year', 'month', 'day', 'q']]"
       ],
-      "id": "bdbe307f",
+      "id": "3239d29a",
       "execution_count": null,
       "outputs": []
     },
@@ -872,7 +872,7 @@
         "\n",
         "-   Export as `.txt`file"
       ],
-      "id": "018fa8a2"
+      "id": "32de4615"
     },
     {
       "cell_type": "code",
@@ -892,7 +892,7 @@
         "\n",
         "print(\"IHA files processed successfully.\")"
       ],
-      "id": "6f3204af",
+      "id": "fba94450",
       "execution_count": null,
       "outputs": []
     },
@@ -914,7 +914,7 @@
         "\n",
         "-   Folder 11 contains text files intended to be imported into QGIS for georeferencing."
       ],
-      "id": "246a5d70"
+      "id": "73bd40c4"
     },
     {
       "cell_type": "code",
@@ -937,7 +937,7 @@
         "\n",
         "print(\"All necessary folders for the results have been created successfully.\")"
       ],
-      "id": "0ee821f3",
+      "id": "20403022",
       "execution_count": null,
       "outputs": []
     },
@@ -947,7 +947,7 @@
       "source": [
         "4.4.2. Georeference the stations in the study basin"
       ],
-      "id": "d7a4a419"
+      "id": "08100a9a"
     },
     {
       "cell_type": "code",
@@ -987,7 +987,7 @@
         "\n",
         "5.1.1. Libraries."
       ],
-      "id": "fb14dc42"
+      "id": "1fb0143c"
     },
     {
       "cell_type": "code",
@@ -999,7 +999,7 @@
         "import matplotlib.dates as mdates\n",
         "from scipy.stats import linregress"
       ],
-      "id": "48122ff8",
+      "id": "18dcceb7",
       "execution_count": null,
       "outputs": []
     },
@@ -1011,7 +1011,7 @@
         "\n",
         "In this case, the figure of the annual accumulated precipitation indicator is generated."
       ],
-      "id": "8d267aaf"
+      "id": "f1fa4a36"
     },
     {
       "cell_type": "code",
@@ -1030,7 +1030,7 @@
         "    if not os.path.exists(carpeta_indices):\n",
         "        continue"
       ],
-      "id": "1c5d98a7",
+      "id": "895d7b0a",
       "execution_count": null,
       "outputs": []
     },
@@ -1042,7 +1042,7 @@
         "\n",
         "In this case, the annual total precipitation indicator is used, identified as `prcptot` in the dataset and therefore with its corresponding station code followed by `_prcptot_ANN.csv` in its file name. To select a different indicator, simply use the name of the corresponding file that contains the desired variable, for example, `_txx_ANN.csv` and the `txx` variable for monthly maximum daily temperature."
       ],
-      "id": "88ebf4fb"
+      "id": "ea0fdb41"
     },
     {
       "cell_type": "code",
@@ -1059,7 +1059,7 @@
         "        df = df[df['prcptot'] != -99.9]\n",
         "        df.set_index('time', inplace=True)"
       ],
-      "id": "07d16394",
+      "id": "34f7fee8",
       "execution_count": null,
       "outputs": []
     },
@@ -1071,7 +1071,7 @@
         "\n",
         "The use of Sen's slope, the regression line, and the statistical values calculated by the Climpact software have not yet been systematically included in the figure."
       ],
-      "id": "878889a2"
+      "id": "faf6cb32"
     },
     {
       "cell_type": "code",
@@ -1135,7 +1135,7 @@
         "\n",
         "Annual total precipitation divided by the number of wet days (when total precipitation \\>= 1.0 mm) is now graphed for each station."
       ],
-      "id": "5a298fb2"
+      "id": "7753ec99"
     },
     {
       "cell_type": "code",
@@ -1221,7 +1221,7 @@
         "\n",
         "Annual sum of daily precipitation \\>= 1.0 mm is now graphed for each station. This was already calculated above."
       ],
-      "id": "1a5270b2"
+      "id": "932c9da9"
     },
     {
       "cell_type": "code",
@@ -1307,7 +1307,7 @@
         "\n",
         "Maximum annual number of consecutive dry days (when precipitation \\< 1.0 mm)."
       ],
-      "id": "945b93be"
+      "id": "84531d54"
     },
     {
       "cell_type": "code",
@@ -1393,7 +1393,7 @@
         "\n",
         "Number of days when precipitation \\>= 30mm."
       ],
-      "id": "7e561cb0"
+      "id": "86d7db66"
     },
     {
       "cell_type": "code",
@@ -1479,7 +1479,7 @@
         "\n",
         "This indicator estimates water balance using precipitation and temperature information. It provides a drought indicator. In this case, it is graphed on a 24-month scale. Due to the monthly scale of the indicator, the code has slight adjustments."
       ],
-      "id": "7ecb29b0"
+      "id": "91093dd3"
     },
     {
       "cell_type": "code",
@@ -1577,7 +1577,7 @@
         "\n",
         "5.3.1. Annual mean daily minimum temperature (tnm)."
       ],
-      "id": "3bdbb31c"
+      "id": "fd423f9e"
     },
     {
       "cell_type": "code",
@@ -1661,7 +1661,7 @@
       "source": [
         "5.3.2. Annual mean daily maximum temperature (txm)."
       ],
-      "id": "e8152073"
+      "id": "8926b870"
     },
     {
       "cell_type": "code",
@@ -1745,7 +1745,7 @@
       "source": [
         "5.3.3. Annual warmest daily maximum temperature (txx)."
       ],
-      "id": "d5f5aa8c"
+      "id": "d68a1e69"
     },
     {
       "cell_type": "code",
@@ -1829,7 +1829,7 @@
       "source": [
         "5.3.4. Annual number of days when minimum temperature \\< 0ºC (id)."
       ],
-      "id": "e7458bb5"
+      "id": "bb772b17"
     },
     {
       "cell_type": "code",
@@ -1915,7 +1915,7 @@
         "\n",
         "### Libraries and workspace."
       ],
-      "id": "39a5fcd2"
+      "id": "05cedd12"
     },
     {
       "cell_type": "code",
@@ -1955,7 +1955,7 @@
         "                \n",
         "print(\"ann, sco, fdc, pct, lsq and daily efcs files saved in its folder.\")"
       ],
-      "id": "2d5faf46",
+      "id": "89900e7d",
       "execution_count": null,
       "outputs": []
     },
@@ -1969,7 +1969,7 @@
         "\n",
         "The order of the months in the `sco_` file may vary. If so, adjust the `meses_ingles` variable accordingly."
       ],
-      "id": "a92634fc"
+      "id": "870a8bd8"
     },
     {
       "cell_type": "code",
@@ -2039,7 +2039,7 @@
         "\n",
         "The language of the months or even the way they are written in the `ann_` file may vary. If so, adjust the `columns` variable and `id_vars` accordingly."
       ],
-      "id": "2e41c838"
+      "id": "fe114eb7"
     },
     {
       "cell_type": "code",
@@ -2125,7 +2125,7 @@
         "\n",
         "The order of the months in the `pct_` file may vary. If so, adjust the `meses_ingles` variable accordingly."
       ],
-      "id": "251bf107"
+      "id": "e71d837e"
     },
     {
       "cell_type": "code",
@@ -2201,7 +2201,7 @@
         "\n",
         "The language of the months or even the way they are written in the `fdc_` file may vary. If so, adjust the `meses` variable accordingly."
       ],
-      "id": "0904f4d4"
+      "id": "043632fd"
     },
     {
       "cell_type": "code",
@@ -2280,7 +2280,7 @@
         "\n",
         "The order of the months in the `sco_` file may vary. If so, adjust the `meses_ingles` variable accordingly."
       ],
-      "id": "bf69fe92"
+      "id": "dc7e15af"
     },
     {
       "cell_type": "code",
@@ -2361,7 +2361,7 @@
         "\n",
         "6.3.1.1. Reading input files and extracting specific data related to the selected month."
       ],
-      "id": "ce7e3092"
+      "id": "b2badb27"
     },
     {
       "cell_type": "code",
@@ -2404,7 +2404,7 @@
         "\n",
         "    return lsq_selected, ann_data, sco_selected"
       ],
-      "id": "589da310",
+      "id": "8bcf913c",
       "execution_count": null,
       "outputs": []
     },
@@ -2414,7 +2414,7 @@
       "source": [
         "6.3.1.2. Saving the extracted data in a single `.csv` file."
       ],
-      "id": "17b04a3d"
+      "id": "8e0c36db"
     },
     {
       "cell_type": "code",
@@ -2435,7 +2435,7 @@
         "        writer.writerow(['Mediana', sco_data['Mediana'].values[0]])\n",
         "        writer.writerow(['Coef. Disper.', sco_data['Coef. Disper.'].values[0]])"
       ],
-      "id": "fcb53914",
+      "id": "063c3127",
       "execution_count": null,
       "outputs": []
     },
@@ -2445,7 +2445,7 @@
       "source": [
         "6.3.1.3. Graph format."
       ],
-      "id": "dadb92a9"
+      "id": "75dead24"
     },
     {
       "cell_type": "code",
@@ -2490,7 +2490,7 @@
         "\n",
         "    print(f\"The CSV file and figure for station {station_code} has been saved in {graph_filename}\")"
       ],
-      "id": "eb5af9f9",
+      "id": "eb37ebdf",
       "execution_count": null,
       "outputs": []
     },
@@ -2500,7 +2500,7 @@
       "source": [
         "6.3.1.4. Graph generation."
       ],
-      "id": "2252c8cb"
+      "id": "ffa8bae4"
     },
     {
       "cell_type": "code",
@@ -2567,7 +2567,7 @@
         "\n",
         "6.3.2.1. Reading input files and extracting specific data related to the selected indicator."
       ],
-      "id": "8d5ecb51"
+      "id": "0a1ebe2a"
     },
     {
       "cell_type": "code",
@@ -2606,7 +2606,7 @@
         "\n",
         "    return lsq_selected, ann_data, sco_selected"
       ],
-      "id": "459dacaa",
+      "id": "749961c1",
       "execution_count": null,
       "outputs": []
     },
@@ -2616,7 +2616,7 @@
       "source": [
         "6.3.2.2. Saving the extracted data in a single `.csv` file."
       ],
-      "id": "d31eab14"
+      "id": "a55bedfa"
     },
     {
       "cell_type": "code",
@@ -2637,7 +2637,7 @@
         "        writer.writerow(['Mediana', sco_data['Mediana'].values[0]])\n",
         "        writer.writerow(['Coef. Disper.', sco_data['Coef. Disper.'].values[0]])"
       ],
-      "id": "0a40bec0",
+      "id": "2d12f30e",
       "execution_count": null,
       "outputs": []
     },
@@ -2647,7 +2647,7 @@
       "source": [
         "6.3.2.3. Graph format."
       ],
-      "id": "7680a0d7"
+      "id": "df37172e"
     },
     {
       "cell_type": "code",
@@ -2692,7 +2692,7 @@
         "\n",
         "    print(f\"The CSV files and figure for station {station_code} has been saved in {graph_filename}\")"
       ],
-      "id": "4e0acac7",
+      "id": "765a7ed7",
       "execution_count": null,
       "outputs": []
     },
@@ -2702,7 +2702,7 @@
       "source": [
         "6.3.2.4. Graph generation."
       ],
-      "id": "a219570e"
+      "id": "a267ad30"
     },
     {
       "cell_type": "code",
@@ -2769,7 +2769,7 @@
         "\n",
         "6.3.3.1. Reading input files and extracting specific data related to the selected indicator."
       ],
-      "id": "a6f7b5b0"
+      "id": "f0921df2"
     },
     {
       "cell_type": "code",
@@ -2808,7 +2808,7 @@
         "\n",
         "    return lsq_selected, ann_data, sco_selected"
       ],
-      "id": "8d2c6f84",
+      "id": "bd198761",
       "execution_count": null,
       "outputs": []
     },
@@ -2818,7 +2818,7 @@
       "source": [
         "6.3.3.2. Saving the extracted data in a single `.csv` file."
       ],
-      "id": "11de9c2c"
+      "id": "224d9e21"
     },
     {
       "cell_type": "code",
@@ -2839,7 +2839,7 @@
         "        writer.writerow(['Mediana', sco_data['Mediana'].values[0]])\n",
         "        writer.writerow(['Coef. Disper.', sco_data['Coef. Disper.'].values[0]])"
       ],
-      "id": "bd0b2628",
+      "id": "f193f90a",
       "execution_count": null,
       "outputs": []
     },
@@ -2849,7 +2849,7 @@
       "source": [
         "6.3.3.3. Graph format."
       ],
-      "id": "6c463d97"
+      "id": "c0774e58"
     },
     {
       "cell_type": "code",
@@ -2894,7 +2894,7 @@
         "\n",
         "    print(f\"The CSV files and figure for station {station_code} has been saved in {graph_filename}\")"
       ],
-      "id": "c6df1364",
+      "id": "8e246b50",
       "execution_count": null,
       "outputs": []
     },
@@ -2904,7 +2904,7 @@
       "source": [
         "6.3.3.4. Graph generation."
       ],
-      "id": "b19c1c21"
+      "id": "14ddc9bb"
     },
     {
       "cell_type": "code",
@@ -2971,7 +2971,7 @@
         "\n",
         "The same process is repeated, adjusted to the specific indicator."
       ],
-      "id": "ae4b2979"
+      "id": "4ea5d653"
     },
     {
       "cell_type": "code",
@@ -3125,7 +3125,7 @@
         "\n",
         "The same process is repeated, adjusted to the specific indicator."
       ],
-      "id": "268d13c5"
+      "id": "5df56adc"
     },
     {
       "cell_type": "code",
