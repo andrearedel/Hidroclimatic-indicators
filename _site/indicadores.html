@@ -179,7 +179,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#time-series-figures" id="toc-time-series-figures" class="nav-link" data-scroll-target="#time-series-figures"><span class="header-section-number">6.3</span> Time series figures</a></li>
   </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="indicadores.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -285,7 +285,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="4.1" class="anchored" data-anchor-id="filter-camels-cl-data"><span class="header-section-number">4.1</span> Filter CAMELS-CL data</h3>
 <p>4.1.1. Dependencies and workspace</p>
 <p>4.1.1.1 Import libraries</p>
-<div id="e1ee1ace" class="cell" data-execution_count="1">
+<div id="24f57cf4" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
@@ -295,7 +295,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p>4.1.1.2. Make sure the directory exists</p>
-<div id="a91f89e6" class="cell" data-execution_count="2">
+<div id="f36a3f0f" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> asegurar_directorio(ruta):</span>
@@ -303,13 +303,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p>4.1.1.3. Define folder paths</p>
-<div id="746c2d86" class="cell" data-execution_count="3">
+<div id="2049fdfa" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>os.chdir(<span class="st">'/Users/andrearedel/Documents/Retoño'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="1d78c56d" class="cell" data-execution_count="4">
+<div id="086f0298" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ruta_base <span class="op">=</span> <span class="st">'Hidroclima/Base de datos'</span></span>
@@ -317,28 +317,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p>4.1.1.4. Create the directory if it doesn’t exist</p>
-<div id="6f186f8c" class="cell" data-execution_count="5">
+<div id="7f6f35d7" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>asegurar_directorio(ruta_guardado)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>4.1.1.5. Additional columns</p>
-<div id="9f14c1b7" class="cell" data-execution_count="6">
+<div id="cbdf70dc" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>columnas_adicionales <span class="op">=</span> [<span class="st">'year'</span>, <span class="st">'month'</span>, <span class="st">'day'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>4.1.2. Maximum temperature filter 4.1.2.1. Read the CSV file</p>
-<div id="f178ab3c" class="cell" data-execution_count="7">
+<div id="7e7bb2bb" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(os.path.join(ruta_base, <span class="st">'CAMELS_CL_v202201/tmax_cr2met_C_day.csv'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>4.1.2.2. Filter columns based on River Basin</p>
-<div id="79ab5629" class="cell" data-execution_count="8">
+<div id="145f9235" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>columnas_filtradas <span class="op">=</span> [col <span class="cf">for</span> col <span class="kw">in</span> df.columns <span class="cf">if</span> col.isdigit() <span class="kw">and</span> <span class="dv">9100000</span> <span class="op">&lt;=</span> <span class="bu">int</span>(col) <span class="op">&lt;=</span> <span class="dv">9199999</span>]</span>
@@ -351,7 +351,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Change the station code range, for example, the Imperial River Basin, identified by the code <code>91</code>.</li>
 <li>Update all relevant parts of the script accordingly.</li>
 </ul>
-<div id="ddc98e40" class="cell" data-execution_count="9">
+<div id="0be81272" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>columnas_filtradas <span class="op">=</span> [col <span class="cf">for</span> col <span class="kw">in</span> df.columns <span class="cf">if</span> col.isdigit() <span class="kw">and</span> <span class="dv">9400000</span> <span class="op">&lt;=</span> <span class="bu">int</span>(col) <span class="op">&lt;=</span> <span class="dv">9499999</span>]</span>
@@ -359,7 +359,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p>4.1.2.3. Create a new Data Frame with the filtered columns</p>
-<div id="68e1caa7" class="cell" data-execution_count="10">
+<div id="4eedfc7a" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df_filtrado <span class="op">=</span> df[columnas_filtradas]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -854,28 +854,28 @@ Table&nbsp;4: Streamflow filter for the stations in each basin
 <section id="create-separate-csv-files-for-each-station-and-variable" class="level3" data-number="4.2">
 <h3 data-number="4.2" class="anchored" data-anchor-id="create-separate-csv-files-for-each-station-and-variable"><span class="header-section-number">4.2</span> Create separate CSV files for each station and variable</h3>
 <p>4.2.1. Minimum Temperature 4.2.1.1. CSV file path</p>
-<div id="7a4d9246" class="cell" data-execution_count="15">
+<div id="21f60950" class="cell" data-execution_count="15">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>archivo_csv <span class="op">=</span> <span class="st">'Hidroclima/Base de datos/0.filtrado_estaciones/tmin.csv'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>4.2.1.2. Read CSV file</p>
-<div id="517e2214" class="cell" data-execution_count="16">
+<div id="296e59d5" class="cell" data-execution_count="16">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(archivo_csv)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>4.2.1.3. Get the Data Frame columns</p>
-<div id="a5428da1" class="cell" data-execution_count="17">
+<div id="0569851a" class="cell" data-execution_count="17">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>columnas <span class="op">=</span> df.columns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>4.2.1.4. Create a directory to save files by column</p>
-<div id="92f5445f" class="cell" data-execution_count="18">
+<div id="9285b696" class="cell" data-execution_count="18">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>output_dir <span class="op">=</span> <span class="st">'Hidroclima/Base de datos/1.temperaturas_min'</span></span>
@@ -1293,7 +1293,7 @@ Table&nbsp;8: Daily streamflow for station 9437002
 <section id="split-data-by-station" class="level3" data-number="4.3">
 <h3 data-number="4.3" class="anchored" data-anchor-id="split-data-by-station"><span class="header-section-number">4.3</span> Split data by station</h3>
 <p>4.3.1. Format data for compability with Climpact 4.3.1.1. Mapping precipitation, minimum and maximum temperature based on filename and file path</p>
-<div id="773af154" class="cell" data-execution_count="23">
+<div id="9d079a43" class="cell" data-execution_count="23">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>dir_principal <span class="op">=</span> <span class="st">'Hidroclima/Base de datos'</span></span>
@@ -1335,7 +1335,7 @@ Table&nbsp;8: Daily streamflow for station 9437002
 </details>
 </div>
 <p>4.3.1.2. Save files by station</p>
-<div id="6f853626" class="cell" data-execution_count="24">
+<div id="8bded055" class="cell" data-execution_count="24">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>output_dir <span class="op">=</span> os.path.join(dir_principal, <span class="st">'4.pre_Climpact'</span>)</span>
@@ -1520,7 +1520,7 @@ Table&nbsp;10: Station 9437002 file with information on each variable
 </div>
 </div>
 <p>4.3.2. Format data for compability with IHA 4.3.2.1. The same process is repeated, now for the streamflow.</p>
-<div id="ae0ae66f" class="cell" data-execution_count="27">
+<div id="0c3f4e2f" class="cell" data-execution_count="27">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>dir_entrada <span class="op">=</span> os.path.join(<span class="st">'Hidroclima'</span>, <span class="st">'Base de datos'</span>, <span class="st">'7.caudales'</span>)</span>
@@ -1545,9 +1545,9 @@ Table&nbsp;10: Station 9437002 file with information on each variable
 <span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a>        df <span class="op">=</span> df[[<span class="st">'year'</span>, <span class="st">'month'</span>, <span class="st">'day'</span>, <span class="st">'q'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The year.csv file does not contain the required columns: {'day', 'year', 'month', 'q'}
-The month.csv file does not contain the required columns: {'day', 'year', 'month', 'q'}
-The day.csv file does not contain the required columns: {'day', 'year', 'month', 'q'}</code></pre>
+<pre><code>The year.csv file does not contain the required columns: {'year', 'month', 'q', 'day'}
+The month.csv file does not contain the required columns: {'year', 'month', 'q', 'day'}
+The day.csv file does not contain the required columns: {'year', 'month', 'q', 'day'}</code></pre>
 </div>
 </div>
 <p>4.3.2.2. Format:</p>
@@ -1559,7 +1559,7 @@ The day.csv file does not contain the required columns: {'day', 'year', 'month',
 <li><p>Streamflow column named <code>flow</code></p></li>
 <li><p>Export as <code>.txt</code>file</p></li>
 </ul>
-<div id="b5829ca9" class="cell" data-execution_count="28">
+<div id="508ab9d1" class="cell" data-execution_count="28">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>        df <span class="op">=</span> df.replace([<span class="bu">float</span>(<span class="st">'inf'</span>), <span class="bu">float</span>(<span class="st">'-inf'</span>)], <span class="op">-</span><span class="fl">1.0</span>).fillna(<span class="op">-</span><span class="fl">1.0</span>)</span>
@@ -1591,7 +1591,7 @@ The day.csv file does not contain the required columns: {'day', 'year', 'month',
 <li><p>Folder 10 includes the figures created from IHA data.</p></li>
 <li><p>Folder 11 contains text files intended to be imported into QGIS for georeferencing.</p></li>
 </ul>
-<div id="bfce6c59" class="cell" data-execution_count="29">
+<div id="20e977c7" class="cell" data-execution_count="29">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>ruta_base <span class="op">=</span> os.path.join(<span class="st">'Hidroclima'</span>, <span class="st">'Base de datos'</span>)</span>
@@ -1800,7 +1800,7 @@ Table&nbsp;11: Information by georeferenced station
 <section id="general-framework-for-customized-figures" class="level3" data-number="5.1">
 <h3 data-number="5.1" class="anchored" data-anchor-id="general-framework-for-customized-figures"><span class="header-section-number">5.1</span> General framework for customized figures</h3>
 <p>5.1.1. Libraries.</p>
-<div id="4565aaf2" class="cell" data-execution_count="31">
+<div id="a2d0d6ed" class="cell" data-execution_count="31">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
@@ -1812,7 +1812,7 @@ Table&nbsp;11: Information by georeferenced station
 </div>
 <p>5.1.2. Base route and output route.</p>
 <p>In this case, the figure of the annual accumulated precipitation indicator is generated.</p>
-<div id="04c1a1e6" class="cell" data-execution_count="32">
+<div id="704cf17e" class="cell" data-execution_count="32">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>ruta_base <span class="op">=</span> <span class="st">'Hidroclima/Base de datos/5.Climpact'</span></span>
@@ -1831,7 +1831,7 @@ Table&nbsp;11: Information by georeferenced station
 </div>
 <p>5.1.3. Selecting the indicator to be graphed.</p>
 <p>In this case, the annual total precipitation indicator is used, identified as <code>prcptot</code> in the dataset and therefore with its corresponding station code followed by <code>_prcptot_ANN.csv</code> in its file name. To select a different indicator, simply use the name of the corresponding file that contains the desired variable, for example, <code>_txx_ANN.csv</code> and the <code>txx</code> variable for monthly maximum daily temperature.</p>
-<div id="d1812a98" class="cell" data-execution_count="33">
+<div id="563ab710" class="cell" data-execution_count="33">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>    archivos <span class="op">=</span> [f <span class="cf">for</span> f <span class="kw">in</span> os.listdir(carpeta_indices) <span class="cf">if</span> f.endswith(<span class="st">'_prcptot_ANN.csv'</span>)]</span>
@@ -2682,7 +2682,7 @@ Figure&nbsp;10: Indicator of annual numbery of days when minimum temperature is 
 <h2 data-number="6" class="anchored" data-anchor-id="generation-of-figures-for-hydrologic-indicators-script"><span class="header-section-number">6</span> Generation of figures for hydrologic indicators script</h2>
 <section id="libraries-and-workspace." class="level3" data-number="6.1">
 <h3 data-number="6.1" class="anchored" data-anchor-id="libraries-and-workspace."><span class="header-section-number">6.1</span> Libraries and workspace.</h3>
-<div id="9b9ca18b" class="cell" data-execution_count="44">
+<div id="4135be27" class="cell" data-execution_count="44">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
@@ -3151,7 +3151,7 @@ Figure&nbsp;15: Median monthly flow by station
 <p>6.3.1. Median flow in July over time.</p>
 <p>In this case, the time series of the median flow in July was selected, as it corresponds to the month with the highest flow in the study basin.</p>
 <p>6.3.1.1. Reading input files and extracting specific data related to the selected month.</p>
-<div id="4753f7e7" class="cell" data-execution_count="50">
+<div id="6d0d279d" class="cell" data-execution_count="50">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>base_folder_path <span class="op">=</span> <span class="st">'Hidroclima/Base de datos/9.IHA/csv/'</span></span>
@@ -3193,7 +3193,7 @@ Figure&nbsp;15: Median monthly flow by station
 </details>
 </div>
 <p>6.3.1.2. Saving the extracted data in a single <code>.csv</code> file.</p>
-<div id="5c2296c7" class="cell" data-execution_count="51">
+<div id="1f42e319" class="cell" data-execution_count="51">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> save_to_csv(lsq_data, ann_data, sco_data, output_file):</span>
@@ -3213,7 +3213,7 @@ Figure&nbsp;15: Median monthly flow by station
 </details>
 </div>
 <p>6.3.1.3. Graph format.</p>
-<div id="feba86da" class="cell" data-execution_count="52">
+<div id="4c87f5df" class="cell" data-execution_count="52">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_data(df, slope, intercept, r_squared, station_code, plot_label):</span>
@@ -3338,7 +3338,7 @@ The CSV file and figure for station 9434001 has been saved in Hidroclima/Base de
 </div>
 <p>6.3.2. High flow pulses duration by station</p>
 <p>6.3.2.1. Reading input files and extracting specific data related to the selected indicator.</p>
-<div id="6d6653b0" class="cell" data-execution_count="54">
+<div id="fd54cd47" class="cell" data-execution_count="54">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb73"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>indicator_names <span class="op">=</span> {</span>
@@ -3376,7 +3376,7 @@ The CSV file and figure for station 9434001 has been saved in Hidroclima/Base de
 </details>
 </div>
 <p>6.3.2.2. Saving the extracted data in a single <code>.csv</code> file.</p>
-<div id="24850104" class="cell" data-execution_count="55">
+<div id="404993c1" class="cell" data-execution_count="55">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb74"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> save_to_csv(lsq_data, ann_data, sco_data, output_file):</span>
@@ -3396,7 +3396,7 @@ The CSV file and figure for station 9434001 has been saved in Hidroclima/Base de
 </details>
 </div>
 <p>6.3.2.3. Graph format.</p>
-<div id="e5cf1f26" class="cell" data-execution_count="56">
+<div id="08c0f736" class="cell" data-execution_count="56">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb75"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_data(df, slope, intercept, r_squared, station_code, plot_label):</span>
@@ -3521,7 +3521,7 @@ The CSV files and figure for station 9434001 has been saved in Hidroclima/Base d
 </div>
 <p>6.3.3. Base Flow Index by station</p>
 <p>6.3.3.1. Reading input files and extracting specific data related to the selected indicator.</p>
-<div id="4bc207e3" class="cell" data-execution_count="58">
+<div id="cc2d309c" class="cell" data-execution_count="58">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb79"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>indicator_names <span class="op">=</span> {</span>
@@ -3559,7 +3559,7 @@ The CSV files and figure for station 9434001 has been saved in Hidroclima/Base d
 </details>
 </div>
 <p>6.3.3.2. Saving the extracted data in a single <code>.csv</code> file.</p>
-<div id="b3f12fd9" class="cell" data-execution_count="59">
+<div id="12d593b4" class="cell" data-execution_count="59">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb80"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> save_to_csv(lsq_data, ann_data, sco_data, output_file):</span>
@@ -3579,7 +3579,7 @@ The CSV files and figure for station 9434001 has been saved in Hidroclima/Base d
 </details>
 </div>
 <p>6.3.3.3. Graph format.</p>
-<div id="393ed113" class="cell" data-execution_count="60">
+<div id="bd390056" class="cell" data-execution_count="60">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb81"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_data(df, slope, intercept, r_squared, station_code, plot_label):</span>
