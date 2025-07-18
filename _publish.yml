@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 1e314b58-c02d-456f-9ca2-0d126e0891c0
+      url: https://lucent-creponne-2d40bb.netlify.app
