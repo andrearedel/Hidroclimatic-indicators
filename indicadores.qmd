@@ -8,7 +8,7 @@ format:
     number-sections: true
     theme: sandstone
     code-tools: true
-  pdf: default
+ 
 editor: visual
 jupyter: python3
 ---
