@@ -1,5 +1,36 @@
 ---
-title: "About"
+title: "About Me"
+format: html
+page-layout: full
+theme: sandstone
 ---
 
-About this site
+# 👋 Hey, I'm Andrea Redel
+
+I was born, raised, and educated in Chile, and I currently live in Switzerland. I’m a Forest Engineer passionate about spatial analysis applied to landscape, conservation, and climate challenges.
+
+Before studying Forest Engineering, I initially pursued a degree in Agronomy. At the core of my interests lies the deep interdependence between humans and nature, and the responsibility we have to manage it wisely.
+
+---
+
+## 🌱 What I Do
+
+I work with **GIS**, **remote sensing**, and **open environmental data** to uncover insights and support sustainable solutions. In Chile, I have contributed to:
+
+- **Restoration projects**
+- **Biological corridor design**
+- **Riparian ecosystem assessment**
+
+These projects combine satellite imagery, environmental indicators, and hydrological data.
+
+---
+
+## 🛠 Tools & Skills
+
+I currently develop and document open workflows for spatial analysis using:
+
+- PostGIS
+- QGIS
+- R
+- Python
+- Quarto

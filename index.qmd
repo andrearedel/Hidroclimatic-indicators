@@ -1,13 +1,17 @@
 ---
 title: "Andrea Redel"
 format: html
+page-layout: full
+theme: sandstone
 ---
 
-# Welcome
+## Welcome to my site on conservation, landscape, and climate change
 
-Hi, I’m Andrea Redel. I’m a Forest Engineer passionate about spatial analysis applied to landscape, conservation, and climate challenges. I work with GIS, remote sensing, and open environmental data to uncover insights and support sustainable solutions.
+Here I present various visualizations, analyses, documentation, and methodologies related to landscape and forest analysis for the study of conservation and climate change.
 
-Some of my projects:
+This project is under continuous development. You can check out the source code on my <a href="https://github.com/andrearedel" target="_blank">GitHub</a>.
+
+## Some of my projects:
 
 - [Hydroclimatic Indicator Workflow](indicadores.qmd)
 - More projects coming soon
