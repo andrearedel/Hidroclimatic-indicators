@@ -1,0 +1,105 @@
+Non-Parametric IHA Scorecard,Unnamed: 1,Unnamed: 2
+,,
+9434001,,
+,,
+Period of Analysis: 1947-2019 ( 58 years),,
+NormalizationFactor ,1,
+Mean annual flow,32.7,
+Non-Normalized Mean Flow,32.7,
+Annual C. V.,1.13,
+Flow predictability,0.46,
+Constancy/predictability,0.44,
+% of floods in 60d period,0.36,
+Flood-free season,1,
+,,
+,Medians,Coeff. of Disp.
+,,
+Parameter Group #1,,
+January,6.04,0.8779
+February,3.378,0.7287
+March,2.99,0.8164
+April,4.683,1.167
+May,12.45,1.778
+June,54.28,0.909
+July,70.8,0.6416
+August,59.3,0.4667
+September,44.83,0.459
+October,30.2,0.6482
+November,16.75,0.7463
+December,10.07,0.7875
+,,
+Parameter Group #2,,
+1-day minimum,2.045,0.8521
+3-day minimum,2.105,0.8781
+7-day minimum,2.166,0.8515
+30-day minimum,2.718,0.8134
+90-day minimum,3.774,0.6986
+1-day maximum,177,0.5424
+3-day maximum,165.2,0.5343
+7-day maximum,144.5,0.4975
+30-day maximum,106.5,0.4472
+90-day maximum,79.84,0.3954
+Number of zero days,0,0
+Base flow index,0.07444,0.6322
+,,
+Parameter Group #3,,
+Date of minimum,74.5,0.1182
+Date of maximum,204,0.1633
+,,
+Parameter Group #4,,
+Low pulse count,4,1
+Low pulse duration,11.75,2.16
+High pulse count,5,1
+High pulse duration,5,1.95
+Low Pulse Threshold,5.73,
+High Pulse Threshold,48.4,
+,,
+Parameter Group #5,,
+Rise rate,1.723,0.7711
+Fall rate,-0.8089,-0.6676
+Number of reversals,89.5,0.3408
+,,
+EFC Low flows,,
+January   Low Flow,6.04,0.7856
+February  Low Flow,4.02,0.5047
+March     Low Flow,3.698,0.594
+April     Low Flow,5.3,0.7915
+May       Low Flow,10.9,1.491
+June      Low Flow,31.8,0.614
+July      Low Flow,37.85,0.355
+August    Low Flow,41.03,0.1868
+September Low Flow,38.2,0.2055
+October   Low Flow,29.15,0.4631
+November  Low Flow,16.65,0.6827
+December  Low Flow,9.74,0.77
+,,
+EFC Parameters,,
+Extreme low peak,2.303,0.3833
+Extreme low duration,8,1.391
+Extreme low timing,72.5,0.06113
+Extreme low freq.,2.5,1.6
+High flow peak,63.7,0.2889
+High flow duration,3,2.208
+High flow timing,227.8,0.152
+High flow frequency,4,1
+High flow rise rate,10.54,0.8213
+High flow fall rate,-6.037,-0.6519
+Small Flood peak,219,0.2249
+Small Flood duration,61.5,0.7256
+Small Flood timing,189.5,0.1332
+Small Flood freq.,0,0
+Small Flood riserate,14.29,1.658
+Small Flood fallrate,-6.781,-0.6779
+Large flood peak,354,0.1031
+Large flood duration,50,0.8
+Large flood timing,207,0.2158
+Large flood freq.,0,0
+Large flood riserate,13.21,1.277
+Large flood fallrate,-11.37,-0.6766
+,,
+EFC low flow threshold:,,
+EFC high flow threshold:,,48.4
+EFC extreme low flow threshold:,,2.88
+,,
+EFC small flood minimum peak flow:,,177
+EFC large flood minimum peak flow:,,323.1
